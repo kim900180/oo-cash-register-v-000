@@ -20,4 +20,15 @@ class CashRegister
     @total += price * quantity
     return @total
   end
+
+  def apply_discount
+    if @discount > 0
+      @discount = @discount/100.to_f
+      @total = @total - (@total * @discount)
+      return "Total amount is ${@total}"
+    else
+      return "No discount"
+    end
+  end
+
 end
