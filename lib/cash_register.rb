@@ -32,7 +32,7 @@ class CashRegister
   end
 
   def items
-    return @item
+    return @items
   end
 
 end
